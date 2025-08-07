@@ -15,11 +15,11 @@ module.exports = async (req, res) => {
     };
 
     const headers = {
-      Authorization: "key os_v2_app_vibl3a5cwbcgxfkf4vxokqi3o2ptaut7gu5ek4nygkglunjy7ebbgfwqcpvih7po7t6w7vzzlggdnloqx3hiioqnp7qcq6cggaolkfa",
+      Authorization: "Basic os_v2_app_vibl3a5cwbcgxfkf4vxokqi3o2ptaut7gu5ek4nygkglunjy7ebbgfwqcpvih7po7t6w7vzzlggdnloqx3hiioqnp7qcq6cggaolkfa",
       "Content-Type": "application/json; charset=utf-8"
     };
 
-    const response = await axios.post("https://onesignal.com/notifications", payload, { headers });
+    const response = await axios.post("https://onesignal.com/api/v1/notifications", payload, { headers });
 
     console.log("Notification sent:", response.data);
     res.status(200).send("Notification sent");
