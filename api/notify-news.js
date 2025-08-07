@@ -19,7 +19,7 @@ module.exports = async (req, res) => {
       "Content-Type": "application/json; charset=utf-8"
     };
 
-    const response = await axios.post("https://onesignal.com/api/v1/notifications", payload, { headers });
+    const response = await axios.post("https://onesignal.com/notifications", payload, { headers });
 
     console.log("Notification sent:", response.data);
     res.status(200).send("Notification sent");
