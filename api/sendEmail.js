@@ -13,11 +13,8 @@ export default async function handler(req, res) {
   }
 
   try {
-    if (!process.env.RESEND_API_KEY) {
-      return res.status(500).json({ error: 'Missing RESEND_API_KEY in env' });
-    }
-
-    const resend = new Resend(process.env.RESEND_API_KEY);
+    // 🔑 Directly using your key (not recommended for production)
+    const resend = new Resend("re_jVPmNc73_AM5kSG1RDqND9iWhV3ATCLLj");
 
     const response = await resend.emails.send({
       from: 'Your Name <mohammadsaudattari@gmail.com>',
