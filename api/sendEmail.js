@@ -16,7 +16,7 @@ export default async function handler(req, res) {
     const resend = new Resend(process.env.RESEND_API_KEY);
 
     await resend.emails.send({
-      from: 'Your Name <your_verified_email@yourdomain.com>',
+      from: 'Your Name <mohammadsaudattari@gmail.com>',
       to,
       subject,
       html: `<p>${message}</p>`,
